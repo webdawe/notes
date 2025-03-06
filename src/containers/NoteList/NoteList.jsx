@@ -2,7 +2,7 @@ import { useDispatch } from "react-redux";
 import s from "./style.module.css";
 import { TextCard } from "components/TextCard/TextCard";
 import { useNavigate } from "react-router-dom";
-import { NoteAPI } from "api/note-api";
+import { NoteAPI } from "api/note";
 import { deleteNote } from "store/notes/notes-slice";
 export function NoteList({ noteList }) {
   const navigate = useNavigate();

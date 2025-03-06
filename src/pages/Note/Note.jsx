@@ -1,21 +1,25 @@
-import { NoteAPI } from "api/note-api";
+import { NoteAPI } from "api/note";
 import { NoteForm } from "components/NoteForm/NoteForm";
 import { withAuthRequired } from "hoc/withAuthRequired";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
 import { deleteNote, updateNote } from "store/notes/notes-slice";
+import { toast } from "utils/sweet-alert";
 
 export function Note() {
   const { noteId } = useParams();
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const note = useSelector((store) =>
+
+  let note = useSelector((store) =>
     store.notesSlice.noteList.find((note) => note.id === noteId)
   );
   const handleSubmit = async (formValues) => {
     const updatedNote = await NoteAPI.updateById(note.id, formValues);
+    console.log(updatedNote);
     dispatch(updateNote(updatedNote));
+    note = updatedNote;
     setIsEditable(false);
   };
 
@@ -26,7 +30,7 @@ export function Note() {
     await NoteAPI.deleteById(note.id);
 
     dispatch(deleteNote(note));
-    alert("deleted note successfully");
+    await toast("success", "deleted note successfully");
     navigate("/");
   };
 

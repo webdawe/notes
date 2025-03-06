@@ -31,7 +31,6 @@ export function NoteForm({
   };
 
   const validate = (fieldName, fieldValue) => {
-    console.log(VALIDATOR[fieldName](fieldValue));
     setFormErrors({
       ...formErrors,
       [fieldName]: VALIDATOR[fieldName](fieldValue),

@@ -1,4 +1,4 @@
-import { NoteAPI } from "api/note-api";
+import { NoteAPI } from "api/note";
 import { ButtonPrimary } from "components/ButtonPrimary/ButtonPrimary";
 import { Header } from "components/Header/Header";
 import { withAuthRequired } from "hoc/withAuthRequired";
@@ -16,7 +16,10 @@ export function App() {
   }
 
   useEffect(() => {
-    fetchAllNotes();
+    const unsubscribe = NoteAPI.onShouldSyncNotes(fetchAllNotes);
+    return () => {
+      unsubscribe();
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (

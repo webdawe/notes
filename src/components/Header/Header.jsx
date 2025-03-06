@@ -31,7 +31,7 @@ export function Header() {
       </div>
     );
   };
-  console.log(user);
+
   return (
     <div className={`row ${s.container}`}>
       <div className="col-xs-12 col-sm-4">
