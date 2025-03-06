@@ -2,63 +2,51 @@
   "notes": [
     {
       "id": "1",
-      "title": "Quick Ideas",
-      "content": "Brainstorming session: New marketing strategies, potential app features, and team-building activities.",
-      "created_at": "2023-12-15"
+      "title": "React Lifecycle: Mounting Phase",
+      "content": "The mounting phase is when a component is being created and inserted into the DOM. It consists of:\n\n1.  **constructor()**: Called before the component is mounted. Used for initializing state, binding event handlers.\n2.  **static getDerivedStateFromProps()**: Rarely used. Allows you to update state based on props.\n3.  **render()**: Required method. Returns the JSX that will be rendered to the DOM.\n4.  **componentDidMount()**: Called after the component is mounted. Ideal for fetching data, setting up subscriptions, or directly manipulating the DOM.",
+      "created_at": "2024-01-15"
     },
     {
       "id": "2",
-      "title": "Meeting with Client X",
-      "content": "Discussed project deliverables, timeline, and budget. Client requested a demo by next week.",
-      "created_at": "2023-12-18"
+      "title": "React Lifecycle: Updating Phase",
+      "content": "The updating phase is when a component is re-rendered due to changes in props or state. It consists of:\n\n1.  **static getDerivedStateFromProps()**: Called before rendering, both on initial mount and subsequent updates.\n2.  **shouldComponentUpdate()**: Determines if the component should re-render. Can be used for performance optimization.\n3.  **render()**: Renders the updated JSX.\n4.  **getSnapshotBeforeUpdate()**: Called before the DOM is updated. Captures information from the DOM before it changes.\n5.  **componentDidUpdate()**: Called after the component is updated. Useful for performing DOM operations based on the new props or state.",
+      "created_at": "2024-01-16"
     },
     {
       "id": "3",
-      "title": "To-Do List",
-      "content": "- Finish report\n- Schedule team meeting\n- Buy groceries\n- Research new technology",
-      "created_at": "2023-12-20"
+      "title": "React Lifecycle: Unmounting Phase",
+      "content": "The unmounting phase is when a component is being removed from the DOM. It consists of:\n\n1.  **componentWillUnmount()**: Called before the component is unmounted. Used for cleanup tasks, such as canceling network requests, invalidating timers, or removing event listeners.",
+      "created_at": "2024-01-17"
     },
     {
       "id": "4",
-      "title": "Book Notes: 'The Lean Startup'",
-      "content": "Key takeaways: Build-measure-learn feedback loop, minimum viable product, validated learning.",
-      "created_at": "2023-12-22"
+      "title": "React Lifecycle: Error Handling Phase",
+      "content": "The error handling phase is when an error occurs during rendering, in a lifecycle method, or in the constructor of any of their child components. It consists of:\n\n1.  **static getDerivedStateFromError()**: Called after an error has been thrown. Used to update state so the next render will show the fallback UI.\n2.  **componentDidCatch()**: Called after an error has been thrown. Used for logging error information.",
+      "created_at": "2024-01-18"
     },
     {
       "id": "5",
-      "title": "Code Snippets",
-      "content": "function calculateSum(a, b) {\n  return a + b;\n}",
-      "created_at": "2023-12-25"
+      "title": "React Hooks and Lifecycle",
+      "content": "With React Hooks, lifecycle methods are often replaced by useEffect. Key points:\n\n1.  **useEffect()**: Combines componentDidMount, componentDidUpdate, and componentWillUnmount.\n2.  Dependency array: Controls when the effect runs.\n3.  Cleanup function: Returned by useEffect for cleanup (like componentWillUnmount).",
+      "created_at": "2024-01-19"
     },
     {
       "id": "6",
-      "title": "Travel Plans: Kyoto",
-      "content": "Visit Fushimi Inari Shrine, explore Arashiyama Bamboo Grove, try local cuisine.",
-      "created_at": "2023-12-28"
+      "title": "React Lifecycle: getDerivedStateFromProps()",
+      "content": "static getDerivedStateFromProps(props, state) is a static method that is called right before the render() method, both on the initial mount and on subsequent updates. It should return an object to update the state, or null to indicate that the new props do not require any state updates. This method exists for rare use cases where the state depends on changes in props over time.",
+      "created_at": "2024-01-20"
     },
     {
       "id": "7",
-      "title": "Recipe: Spaghetti Carbonara",
-      "content": "Ingredients: Spaghetti, eggs, guanciale, pecorino romano, black pepper. Instructions: Cook pasta, fry guanciale, mix with eggs and cheese.",
-      "created_at": "2023-12-30"
+      "title": "React Lifecycle: shouldComponentUpdate()",
+      "content": "shouldComponentUpdate(nextProps, nextState) is a lifecycle method that lets React know if a component's output is not affected by the current change in state or props. If shouldComponentUpdate returns false, then render() will be completely skipped until the next state change. In addition, componentWillUpdate and componentDidUpdate will not be called. By default, shouldComponentUpdate always returns true, preventing potential bugs for the developer. If performance is a bottleneck, then you can override this method to add a wise comparison of this.props with nextProps and this.state with nextState.",
+      "created_at": "2024-01-21"
     },
     {
       "id": "8",
-      "title": "Project Y - Bug Fixes",
-      "content": "- Fixed issue with user login\n- Resolved data synchronization problem\n- Improved error handling",
-      "created_at": "2024-01-02"
-    },
-    {
-      "id": "9",
-      "title": "Personal Goals",
-      "content": "- Read 10 books this year\n- Learn a new language\n- Exercise 3 times a week",
-      "created_at": "2024-01-05"
-    },
-    {
-      "id": "10",
-      "title": "Website Design Ideas",
-      "content": "Use a clean and modern design, focus on user experience, incorporate high-quality images.",
-      "created_at": "2024-01-08"
+      "title": "React Lifecycle: componentDidUpdate()",
+      "content": "componentDidUpdate(prevProps, prevState, snapshot) is invoked immediately after updating occurs. This method is not called for the initial render. Use this as an opportunity to operate on the DOM when the component has been updated. This is also a good place to do network requests as long as you compare the current props to previous props (e.g. a network request may be unnecessary if the props have not changed).",
+      "created_at": "2024-01-22"
     }
   ]
 }
