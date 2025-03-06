@@ -1,0 +1,64 @@
+{
+  "notes": [
+    {
+      "id": "1",
+      "title": "Quick Ideas",
+      "content": "Brainstorming session: New marketing strategies, potential app features, and team-building activities.",
+      "created_at": "2023-12-15"
+    },
+    {
+      "id": "2",
+      "title": "Meeting with Client X",
+      "content": "Discussed project deliverables, timeline, and budget. Client requested a demo by next week.",
+      "created_at": "2023-12-18"
+    },
+    {
+      "id": "3",
+      "title": "To-Do List",
+      "content": "- Finish report\n- Schedule team meeting\n- Buy groceries\n- Research new technology",
+      "created_at": "2023-12-20"
+    },
+    {
+      "id": "4",
+      "title": "Book Notes: 'The Lean Startup'",
+      "content": "Key takeaways: Build-measure-learn feedback loop, minimum viable product, validated learning.",
+      "created_at": "2023-12-22"
+    },
+    {
+      "id": "5",
+      "title": "Code Snippets",
+      "content": "function calculateSum(a, b) {\n  return a + b;\n}",
+      "created_at": "2023-12-25"
+    },
+    {
+      "id": "6",
+      "title": "Travel Plans: Kyoto",
+      "content": "Visit Fushimi Inari Shrine, explore Arashiyama Bamboo Grove, try local cuisine.",
+      "created_at": "2023-12-28"
+    },
+    {
+      "id": "7",
+      "title": "Recipe: Spaghetti Carbonara",
+      "content": "Ingredients: Spaghetti, eggs, guanciale, pecorino romano, black pepper. Instructions: Cook pasta, fry guanciale, mix with eggs and cheese.",
+      "created_at": "2023-12-30"
+    },
+    {
+      "id": "8",
+      "title": "Project Y - Bug Fixes",
+      "content": "- Fixed issue with user login\n- Resolved data synchronization problem\n- Improved error handling",
+      "created_at": "2024-01-02"
+    },
+    {
+      "id": "9",
+      "title": "Personal Goals",
+      "content": "- Read 10 books this year\n- Learn a new language\n- Exercise 3 times a week",
+      "created_at": "2024-01-05"
+    },
+    {
+      "id": "10",
+      "title": "Website Design Ideas",
+      "content": "Use a clean and modern design, focus on user experience, incorporate high-quality images.",
+      "created_at": "2024-01-08"
+    }
+  ]
+}
